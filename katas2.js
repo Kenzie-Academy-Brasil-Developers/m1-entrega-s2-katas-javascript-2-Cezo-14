@@ -1,37 +1,31 @@
-// comece a criar a sua função add na linha abaixo
+function add(num1, num2) {
+  return num1 + num2;
+}
+console.log(add(2, 4));
 
+function multiply(num1, num2) {
+  let result = 0;
+  for (let i = 0; i < num2; i++) {
+    result = add(result, num1);
+  }
+  return result;
+}
+console.log(multiply(6, 8));
 
-// descomente a linha seguinte para testar sua função
-// console.assert(add(3, 5) === 8, 'A função add não está funcionando como esperado');
+function power(x, n) {
+  let result = 1;
+  for (let i = 0; i < n; i++) {
+    result = multiply(result, x);
+  }
+  return result;
+}
+console.log(power(2, 8));
 
-
-// comece a criar a sua função multiply na linha abaixo
-
-
-// descomente a linha seguinte para testar sua função
-// console.assert(multiply(4, 6) === 24, 'A função multiply não está funcionando como esperado');
-
-
-// comece a criar a sua função power na linha abaixo
-
-
-// descomente a linha seguinte para testar sua função
-// console.assert(power(3, 4) === 81, 'A função power não está funcionando como esperado');
-
-
-// comece a criar a sua função factorial na linha abaixo
-
-
-// descomente a linha seguinte para testar sua função
-// console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
-
-
-/**
- * BONUS (aviso: o grau de dificuldade é bem maior !!!)
- */
-
-// crie a função fibonacci
-
-
-// descomente a linha seguinte para testar sua função
-// console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
+function factorial(fato) {
+  let result = 1;
+  for (let i = fato; i > 1; i--) {
+    result = multiply(result, i);
+  }
+  return result;
+}
+console.log(factorial(4));
